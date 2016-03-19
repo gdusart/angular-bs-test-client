@@ -1,7 +1,7 @@
 /* global angular */
 
 angular.module('mainApp').controller('loginController',
-    function($scope, $rootScope, AUTH_EVENTS, AuthService, $log, $location) {
+    function($scope, $rootScope, AUTH_EVENTS, AuthService, $log, $route) {
 
         $scope.credentials = {
             username: '',
@@ -14,7 +14,7 @@ angular.module('mainApp').controller('loginController',
                 $log.debug("login success")
                 $rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
                 $scope.setCurrentUser(user);
-                $location.path('/home')
+                $route.reload();
             }, function() {
                 $rootScope.$broadcast(AUTH_EVENTS.loginFailed);
             });
