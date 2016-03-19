@@ -1,1 +1,1 @@
-#Small test client using angular and bootstrap
+a simple angular / bootstrap test client
