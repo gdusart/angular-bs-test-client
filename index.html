@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
-<html lang="en-us">
+<html lang="en-us" ng-app="mainApp">
 
 <head>
 	<meta charset="utf-8">
 	<title>Hello...</title>
+
 	
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" type="text/css" />
 
-	<body ng-app="mainApp">
-
+	<body ng-controller="ApplicationController">
+		User: {{currentUser}}
 		<!--VIEW-->
-		<div ng-view></div>
+		
+		<div ng-show="{{isLoggedIn()}}" ng-view></div>
+		<div ng-hide="{{isLoggedIn()}}" login-dialog></div>
 
 		
 		<script src="bower_components/angular/angular.min.js"></script>
 		<script src="bower_components/angular-route/angular-route.min.js"></script>
 		<script src="bower_components/angular-smart-table/dist/smart-table.min.js"></script>
 		<script src="bower_components/jquery/dist/jquery.min.js"></script>
-		
+		<script src="bower_components/angular-resource/angular-resource.min.js"></script>
 		
 		<script src="main.js"></script>
+		<script src="app/controllers/loginController.js"></script>
+		<script src="app/controllers/serversController.js"></script>
+		<script src="app/app.routes.js"></script>
 	</body>
 
 </html>

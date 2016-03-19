@@ -19,6 +19,7 @@
     "bootstrap": "^3.3.6",
     "angular": "^1.5.2",
     "angular-route": "^1.5.2",
-    "angular-smart-table": "^2.1.7"
+    "angular-smart-table": "^2.1.7",
+    "angular-resource": "^1.5.2"
   }
 }

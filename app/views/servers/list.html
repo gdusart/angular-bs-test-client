@@ -1,20 +1,26 @@
 <div class="container">
-    <h2> Servers list </h2> Search:
+    <h2> Servers list coucou </h2> Search:
     <br/>
     <input type="text" ng-model="name" />
     <br/>
+    <button data-ng-click="refresh()">Refresh</button>
 
     <table st-table="rowCollection" class="table table-striped">
         <thead>
             <tr>
                 <th>Server name</th>
                 <th>Address</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
             <tr ng-repeat="server in servers | filter:name">
                 <td>{{server.name}}</td>
                 <td>{{server.address}}</td>
+                <td>
+                    <a href="#/edit">edit</a>
+                    <a data-ng-click="delete(server._id);">delete</a>
+                </td>
             </tr>
         </tbody>
     </table>
