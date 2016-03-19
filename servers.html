@@ -1,0 +1,21 @@
+<div class="container">
+    <h2> Servers list </h2> Search:
+    <br/>
+    <input type="text" ng-model="name" />
+    <br/>
+
+    <table st-table="rowCollection" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Server name</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="server in servers | filter:name">
+                <td>{{server.name}}</td>
+                <td>{{server.address}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

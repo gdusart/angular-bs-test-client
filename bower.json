@@ -1,0 +1,24 @@
+{
+  "name": "testclient",
+  "authors": [
+    "Greg <gdusart@gmail.com>"
+  ],
+  "description": "a test client",
+  "main": "main.js",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "angular": "^1.5.2",
+    "angular-route": "^1.5.2",
+    "angular-smart-table": "^2.1.7"
+  }
+}
